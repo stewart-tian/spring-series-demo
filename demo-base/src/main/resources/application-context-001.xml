@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--  容器中不同bean不能出现id和name出现同一值的情况，同一bean的id和name值可以相同  -->
+    <bean id="demo" name="demo" class="com.stewart.spring.entity.Demo"/>
+
+    <bean id="example" name="example0" class="com.stewart.spring.entity.Example"/>
+
+    <bean name="example1" class="com.stewart.spring.entity.Example"/>
+
+    <!--  没有给bean设置id值和name值，容器会给bean设置默认id值：类全名#n 从0开始 -->
+    <bean class="com.stewart.spring.entity.Example"/>
+    <bean class="com.stewart.spring.entity.Example"/>
+
+</beans>
